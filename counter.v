@@ -1,4 +1,4 @@
-// 4-bit counter with synchronous reset
+// 4-bit counter with asynchronous reset
 module counter (
     input  clk,
     input  rst,
