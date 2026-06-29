@@ -2,13 +2,14 @@
 # Build and run all testbenches
 
 set -e
+cd "$(dirname "$0")"
 
 run_test() {
     local name=$1
     local top=$2
     local src=$3
     echo "=== Testing $name ==="
-    verilator --cc $src --top-module $top --exe tb_${name}.cpp --build -j 0
+    verilator --cc ../src/$src --top-module $top --exe tb_${name}.cpp --build -j 0
     ./obj_dir/V${top}
     echo ""
 }
