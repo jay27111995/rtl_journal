@@ -1,0 +1,22 @@
+#!/bin/bash
+# Build and run all testbenches
+
+set -e
+
+run_test() {
+    local name=$1
+    local top=$2
+    local src=$3
+    echo "=== Testing $name ==="
+    verilator --cc $src --top-module $top --exe tb_${name}.cpp --build -j 0
+    ./obj_dir/V${top}
+    echo ""
+}
+
+run_test counter counter counter.v
+run_test timer timer timer.v
+run_test mux2 mux2 mux2.v
+run_test mux4 mux4 mux4.v
+run_test loopback loopback encoder_decoder.v
+
+echo "=== All tests passed ==="
