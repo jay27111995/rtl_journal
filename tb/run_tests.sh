@@ -21,5 +21,6 @@ run_test mux4 mux4 mux4.v
 run_test loopback loopback encoder_decoder.v
 run_test shift_reg shift_reg shift_reg.v
 run_test priority_enc priority_enc priority_enc.sv
+run_test traffic_light traffic_light traffic_light.sv
 
 echo "=== All tests passed ==="
