@@ -23,5 +23,6 @@ run_test shift_reg shift_reg shift_reg.v
 run_test priority_enc priority_enc priority_enc.sv
 run_test traffic_light traffic_light traffic_light.sv
 run_test reg_file reg_file reg_file.sv
+run_test fifo fifo fifo.sv
 
 echo "=== All tests passed ==="
