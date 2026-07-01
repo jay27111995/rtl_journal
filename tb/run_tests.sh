@@ -25,4 +25,9 @@ run_test traffic_light traffic_light traffic_light.sv
 run_test reg_file reg_file reg_file.sv
 run_test fifo fifo fifo.sv
 
+echo "=== Testing uart_loopback ==="
+verilator --cc ../src/uart_tx.sv ../src/uart_rx.sv ../src/uart_loopback.sv --top-module uart_loopback --exe tb_uart_loopback.cpp --build -j 0
+./obj_dir/Vuart_loopback
+echo ""
+
 echo "=== All tests passed ==="

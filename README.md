@@ -23,6 +23,9 @@ tb/            # Verilator C++ testbenches
 | `traffic_light.sv` | Traffic light FSM with timer (SystemVerilog) |
 | `reg_file.sv` | 4x8-bit register file, 2 read + 1 write port |
 | `fifo.sv` | 8-entry FIFO with full/empty flags |
+| `uart_tx.sv` | UART transmitter (8N1, 16 clocks/bit) |
+| `uart_rx.sv` | UART receiver (8N1, samples mid-bit) |
+| `uart_loopback.sv` | TX→RX loopback for testing |
 
 ## Running Tests
 
